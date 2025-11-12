@@ -7,12 +7,9 @@ struct PlotPlane{
 	unsigned int width;
 };
 
-struct Pixel {
-	char texture;
-	unsigned int x;
-	unsigned int y;
-};
-
 struct PlotPlane createPlotPlane(unsigned int height, unsigned int width);
 void printPlotPlane(struct PlotPlane pp);
+void setPixel(struct PlotPlane pp, unsigned int x, unsigned int y, char texture);
+int areCordsWithinRange(struct PlotPlane pp, unsigned int x, unsigned int y);
+char *setStringHorizontally(struct PlotPlane pp, unsigned int x, unsigned int y, char *str);
 #endif
